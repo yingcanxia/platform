@@ -8,6 +8,7 @@
         <module>platform-model</module>
         <module>platform-service</module>
         <module>platfrom-web</module>
+        <module>platform-monitor</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

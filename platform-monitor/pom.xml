@@ -9,18 +9,23 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>platfrom-web</artifactId>
+    <artifactId>platform-monitor</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.experimental</groupId>
-            <artifactId>platform-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-server</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
             <version>2.3.0</version>
         </dependency>
     </dependencies>
+
 </project>
