@@ -7,8 +7,7 @@
         <module>platform-common</module>
         <module>platform-model</module>
         <module>platform-service</module>
-        <module>platfrom-web</module>
-        <module>platform-monitor</module>
+        <module>platform-web</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -19,7 +18,7 @@
     <groupId>com.experimental</groupId>
     <artifactId>platform</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>platform-web</name>
+    <name>platform</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
