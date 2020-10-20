@@ -10,6 +10,7 @@
         <module>platform-web</module>
         <module>platform-provider</module>
         <module>platform-monitor</module>
+        <module>platform-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
