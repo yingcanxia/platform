@@ -21,3 +21,6 @@ management:
   endpoint:
     health:
       show-details: always
+platform-provider:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
