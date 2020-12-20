@@ -21,6 +21,15 @@ management:
   endpoint:
     health:
       show-details: always
+
+#这里是customer调用provider的调用规则
+#选择最小并发量请求的service   com.netflix.loadbalancer.BestAvailableRule
+#过滤掉一直连接失败被标记为circuit tripped的service和高并发的service    com.netflix.loadbalancer.AvailabilityFilteringRule
+#根据响应时间分配一个weight响应时间越长weight越小，被调用的可能性越低调   com.netflix.loadbalancer.WeightedResponseTimeRule
+#就算定的负载均衡策略机制采取重试机制    com.netflix.loadbalancer.RetryRule
+#使用roundRobin方式轮询选择service    com.netflix.loadbalancer.RoundRobinRule
+#随机算则一个service    com.netflix.loadbalancer.RandomRule
+#复合判断service所在区域性能和service的可能性根据结果来选择service
 platform-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
