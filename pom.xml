@@ -11,6 +11,7 @@
         <module>platform-provider</module>
         <module>platform-monitor</module>
         <module>platform-consumer</module>
+        <module>platform-hystrix</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
