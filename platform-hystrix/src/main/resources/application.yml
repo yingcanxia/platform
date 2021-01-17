@@ -9,3 +9,12 @@ spring:
       port: 8500
       discovery:
         service-name: ${spring.application.name}
+turbine:
+  instanceUrlSuffix: /hystrix.stream
+  # 指定了需要手机监控信息的服务名，以多个“,”进行区分
+  app-config: platform-provider,platform-consumer
+  # 指定集群名称，若为default则为默认集群，多个集群通过此配置区分
+  cluster-name-expression: "'default'"
+  # 默认为false，服务以host进行区分，若设置为true则以host和port进行区分
+  combine-host-port: true
+
