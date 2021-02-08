@@ -12,6 +12,7 @@
         <module>platform-monitor</module>
         <module>platform-consumer</module>
         <module>platform-hystrix</module>
+        <module>platform-task</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
