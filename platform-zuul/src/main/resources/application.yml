@@ -16,3 +16,4 @@ zuul:
     feign:
       path: /feign/**
       serviceId: platform-consumer
+  prefix: /v1
