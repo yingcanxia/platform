@@ -13,6 +13,7 @@
         <module>platform-consumer</module>
         <module>platform-hystrix</module>
         <module>platform-task</module>
+        <module>platform-zuul</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
