@@ -12,23 +12,28 @@ import java.io.IOException;
 public class MyFilter extends ZuulFilter {
     @Override
     public String filterType() {
+        // 定义filter的类型，四种：pre,route,post,error
         return "pre";
     }
 
     @Override
     public int filterOrder() {
+        // 定义filter的顺序,字数越小优先级又高,越先执行
         return 0;
     }
 
     @Override
     public boolean shouldFilter() {
+        // 是否要执行filter
         return true;
     }
 
     @Override
     public Object run() throws ZuulException {
+        // filter中需要做的操作
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
+        // 需要过滤http请求是否携带了filter
         String token = request.getParameter("token");
         System.out.println(token);
         if (token == null){
@@ -37,6 +42,7 @@ public class MyFilter extends ZuulFilter {
             try {
                 ctx.getResponse().getWriter().write("没有token");
             } catch (IOException e) {
+
                 e.printStackTrace();
             }
             return null;
